@@ -30,3 +30,43 @@ DB by writing queries, all the raw queries or ORM queries will go here.
 
 - `services` → contains the buiness logic and interacts with repositories for data
 from the database.
+
+
+- `utils` → contains helper methods, error classes etc.
+
+### Setup the project
+
+    - Download this template from github and open it in your favourite text editor.
+    - Go inside the folder path and execute the following command:
+      ```
+      npm install
+      ```
+    - In the root directory create the `.env` file and add the following env variables
+
+    ```
+    PORT=<port number of your choice>
+    ```
+    ex:
+    ```
+    PORT =3000
+    ```
+
+
+- go inside the `src` folder and execute the following command:
+```
+npx sequelize init
+```
+
+    - By executing the above command you will get migrations and seeders folder along
+    with a config. json inside the config folder.
+    - If you're setting up your development environment, then write the username of you:
+    db, password of your db and in dialect mention whatever db you are using for ex:
+    mysql, mariadb ete
+    - If you're setting up test or prod environment, make sure you also replace the hos
+    with the hosted db url.
+
+    - To run the server execute
+    ```
+    npm run dev
+    ```
+
