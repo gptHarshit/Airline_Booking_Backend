@@ -11,4 +11,8 @@ router.post(
   CityController.createCity
 );
 
+
+router.patch("/:id",
+  CityController.updateCity);
+
 module.exports = router;
