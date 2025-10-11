@@ -1,9 +1,7 @@
 const { response } = require("express");
 const { AirplaneService } = require("../services");
 const { StatusCodes } = require("http-status-codes");
-
 const { SuccessResponse, ErrorResponse } = require("../utils/common");
-const { success } = require("../utils/common/error-response");
 
 async function createAirplane(req, res) {
   try {
@@ -30,7 +28,6 @@ async function getAirplanes(req, res) {
     return res.status(error.statusCode).json(ErrorResponse);
   }
 }
-
 
 
 async function getAirplane(req, res) {
